@@ -8,7 +8,6 @@ subtitle: "An exercise in plotly-ing"
 author: 
   name: Cecil Philip John
   affiliation: Georgetown University
-  email: cpj29@georgetown.edu
 toc-title: On this page
 format: 
   html:
@@ -211,7 +210,9 @@ gapminder %>%
 
 *When we hover around the plot, we can see... that nothing happens!*
 
-<p><p>
+<p>
+
+<p>
 
 The primary requirement of using `ggploty` from the ploty package is to have a ggplot object.(This also means that ggplotly ) In our case we have created `lifeexpplot` as a ggplot object. We then call this ggplot object using ggplotly.
 
@@ -279,7 +280,7 @@ Without any specific customization, the labels and the ribbon may be overwhelmin
 
 <p>
 
-#### `config()` 
+#### `config()`
 
 <p>
 
@@ -289,13 +290,15 @@ It is possible to remove the modebar completely, drop certain buttons or add add
 
 <p>
 
-#### `tooltip` 
+#### `tooltip`
 
 <p>
 
 The default behavior of plotly is to include all the aesthetic mappings from the ggplot layers to the tooltips. In the need of drawing attention to only particular values, the tooltips can be customized to restrict what is shown. A `text` aesthetic defined in ggplot can be used to create a specific label that can then be accessed via `tooltip` argument of plotly.
 
-<p><p>
+<p>
+
+<p>
 
 ```{r}
 modplot <- 
@@ -314,7 +317,9 @@ ggplotly(modplot, tooltip = 'text') %>%
   config(displayModeBar = FALSE)
 ```
 
-<p>Here we set the labels as the names of the countries and remove the modebar.
+<p>
+
+Here we set the labels as the names of the countries and remove the modebar.
 
 ## Animation
 
